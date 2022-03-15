@@ -13,7 +13,7 @@ const Siswa = (props) => {
                 <p className="hp-mahasiswa">{props.hp}</p>
                 <p className="angkatan-mahasiswa">{props.angkatan}</p>
                 <p className="status-mahasiswa">{props.status}</p>
-                <button className="btn btn-sm btn-warning" onClick={() => props.hapusMahasiswa(props.idMahasiswa)}>Hapus</button>
+                <button className="btn btn-sm btn-warning" onClick={() => props.hapusData(props.idMhs)}>Hapus</button>
             </div>
         </div>
     )

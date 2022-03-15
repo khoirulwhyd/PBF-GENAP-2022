@@ -29,7 +29,7 @@ class Mahasiswa extends Component{
         this.ambilDataDariServerAPI()
     }
 
-    handleHapusMahasiswa = (data) => {
+    handleHapusData = (data) => {
         fetch(`http://localhost:3001/mahasiswa/${data}`, {method: 'DELETE'})
             .then( res => {
                 this.ambilDataDariServerAPI()
@@ -111,8 +111,8 @@ class Mahasiswa extends Component{
                     <h2>Daftar Mahasiswa</h2>
                     {
                         this.state.listMahasiswa.map(mahasiswa => {
-                            return <Siswa key={mahasiswa.NIM} NIM={mahasiswa.NIM} nama={mahasiswa.nama} alamat={mahasiswa.alamat}
-                            hp = {mahasiswa.hp} angkatan = {mahasiswa.angkatan} status = {mahasiswa.status} idMahasiswa={mahasiswa.id} hapusMahasiswa={this.handleHapusMahasiswa}/>
+                            return <Siswa key={mahasiswa.id} idMhs={mahasiswa.id} NIM={mahasiswa.NIM} nama={mahasiswa.nama} alamat={mahasiswa.alamat}
+                            hp = {mahasiswa.hp} angkatan = {mahasiswa.angkatan} status = {mahasiswa.status} idMahasiswa={mahasiswa.id} hapusData={this.handleHapusData}/>
                         })
                     }
             </div>
